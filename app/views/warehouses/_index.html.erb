@@ -1,0 +1,18 @@
+<table class="table .table-bordered">
+  <thead>
+  <tr>
+    <th scope="col">Warehouse Location</th>
+    <th scope="col">Inventory Items</th>
+    <th scope="col">Edit</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <% @warehouses.all.each do |warehouse| %>
+      <td><%= "#{warehouse.name}" %> </td>
+      <td><%= "#{warehouse.inventory_items.map(&:name).join(", ")}" %> </td>
+      <td><button type="button" class="btn btn-outline-primary btn-sm"><%= link_to "Edit", edit_warehouse_path(warehouse) %></button></td>
+  </tr>
+  </tbody>
+<% end %>
+</table>

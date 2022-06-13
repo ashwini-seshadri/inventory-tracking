@@ -1,0 +1,10 @@
+<%= form_for @inventory_item do |f| %>
+  <div>name: <%= f.text_field :name %></div>
+  <div>warehouses:</div>
+  <%= f.collection_check_boxes :warehouse_ids, Warehouse.all, :id, :name do |m| %>
+    <div>
+      <%= m.check_box %> <%= m.label %>
+    </div>
+  <% end %>
+  <%= f.submit %>
+<% end %>

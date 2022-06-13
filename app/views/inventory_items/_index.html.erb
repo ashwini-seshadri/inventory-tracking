@@ -1,0 +1,21 @@
+<table class="table .table-bordered">
+  <thead>
+  <tr>
+    <th scope="col">ID</th>
+    <th scope="col">Inventory Item</th>
+    <th scope="col">Edit</th>
+    <th scope="col">Delete</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <% @inventory_items.each do |inventory_item| %>
+      <td><%= inventory_item.id %>
+      <td><%= inventory_item.name %>
+        <td><button type="button" class="btn btn-outline-primary btn-sm"><%= link_to "Edit", edit_inventory_item_path(inventory_item) %></button></td>
+        <td><button type="button" class="btn btn-outline-danger btn-sm"> <%= link_to "Delete", inventory_item_path(inventory_item), data: { turbo_confirm: "Are you sure?",  turbo_method: :delete } %></button></td>
+      </td>
+  </tr>
+  </tbody>
+    <% end %>
+</table>

@@ -1,24 +1,15 @@
-# README
+## Setup on Replit
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+In order to run this applicaiton on Replit you will need to click 'fork repl' (create an account if you don't already have one) and copy and paste each of the below lines of code in 'Shell'.
 
-Things you may want to cover:
+1. Configure your datastore
 
-* Ruby version
+        rake db:setup
 
-* System dependencies
+2. Click 'Run' button
 
-* Configuration
+3. REPLit will not work on iframe. Please open the project in a new tab.
 
-* Database creation
+The github repo can be found [here](https://github.com/ashwini-seshadri/inventory-tracking)
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+The replit demo can be found [here](https://horriblerichconferences.ashwiniseshadri.repl.co/)

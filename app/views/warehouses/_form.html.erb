@@ -1,0 +1,18 @@
+<%= form_for @warehouse do |f| %>
+  <div>
+    Name: <%= f.text_field :name %>
+  </div>
+  <div>
+    Inventory items to be assigned to warehouse:
+  </div>
+  <div>
+    <%= f.collection_check_boxes :inventory_item_ids, InventoryItem.all, :id, :name do |m| %>
+      <div>
+        <%= m.check_box %> <%= m.label %>
+      </div>
+    <% end %>
+  </div>
+  <div>
+    <%= f.submit %>
+  </div>
+<% end %>

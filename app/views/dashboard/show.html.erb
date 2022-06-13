@@ -1,0 +1,24 @@
+<div>
+  <div>
+    <h2>Inventory Tracking System</h2>
+  </div>
+</div>
+
+<div>
+  <div>
+    <h3>Warehouses:</h3>
+    <div class="g-col-2">
+      <%= link_to("Add New", new_warehouse_path, class: "btn btn-outline-primary") %>
+    </div>
+    <table class="table .table-bordered">
+      <%= render partial: "warehouses/index" %>
+    </table>
+  </div>
+  <div>
+    <h3>Inventory Items:</h3>
+    <div class="g-col-2">
+      <%= link_to("Add New", new_inventory_item_path, class: "btn btn-outline-primary") %>
+    </div>
+    <%= render partial: "inventory_items/index" %>
+  </div>
+</div>

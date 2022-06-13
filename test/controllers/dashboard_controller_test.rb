@@ -2,7 +2,7 @@
 
 require 'test_helper'
 
-class InventoryItemWarehouseTest < ActiveSupport::TestCase
+class DashboardControllerTest < ActionDispatch::IntegrationTest
   # test "the truth" do
   #   assert true
   # end
